@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <title>Bosquejo del mapa interactivo UDB para teléfono</title>
+  <desc>Interfaz móvil con encabezado compacto, buscador, filtros desplazables, mapa dominante y panel inferior de información.</desc>
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#122150" flood-opacity="0.2"/></filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#d9e1ee"/></pattern>
+  </defs>
+  <rect width="390" height="844" fill="#ebeff9"/>
+
+  <g id="encabezado">
+    <rect width="390" height="64" fill="#274292"/>
+    <rect x="14" y="12" width="40" height="40" rx="9" fill="#ffe000"/>
+    <text x="34" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#274292">UDB</text>
+    <text x="66" y="31" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Mapa interactivo</text>
+    <text x="66" y="47" font-family="Arial, sans-serif" font-size="10" fill="#cbd7f5">Campus UDB</text>
+    <rect x="336" y="13" width="40" height="38" rx="9" fill="#35529f"/>
+    <path d="M346 24h20M346 32h20M346 40h20" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <g id="busqueda">
+    <rect x="14" y="78" width="362" height="50" rx="13" fill="#ffffff" filter="url(#shadow)"/>
+    <circle cx="38" cy="103" r="8" fill="none" stroke="#274292" stroke-width="2"/>
+    <path d="M44 109l6 6" stroke="#274292" stroke-width="2" stroke-linecap="round"/>
+    <text x="61" y="108" font-family="Arial, sans-serif" font-size="13" fill="#7a8496">¿A dónde deseas ir?</text>
+    <circle cx="347" cy="103" r="15" fill="#274292"/>
+    <path d="M347 95v16M341 101l6-6 6 6" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g id="filtros" font-family="Arial, sans-serif" font-size="11" font-weight="700">
+    <rect x="14" y="142" width="64" height="34" rx="17" fill="#274292"/><text x="46" y="163" text-anchor="middle" fill="#ffffff">Todos</text>
+    <rect x="86" y="142" width="85" height="34" rx="17" fill="#ffffff"/><text x="128" y="163" text-anchor="middle" fill="#274292">Edificios</text>
+    <rect x="179" y="142" width="102" height="34" rx="17" fill="#ffffff"/><text x="230" y="163" text-anchor="middle" fill="#274292">Laboratorios</text>
+    <rect x="289" y="142" width="87" height="34" rx="17" fill="#ffffff"/><text x="332" y="163" text-anchor="middle" fill="#274292">Más +</text>
+  </g>
+
+  <g id="mapa">
+    <rect x="0" y="190" width="390" height="654" fill="#f8fafc"/>
+    <rect x="0" y="190" width="390" height="654" fill="url(#grid)"/>
+    <path d="M-15 680C65 608 116 640 184 560S300 500 412 524" fill="none" stroke="#ffffff" stroke-width="42"/>
+    <path d="M-15 680C65 608 116 640 184 560S300 500 412 524" fill="none" stroke="#c4cedc" stroke-width="3" stroke-dasharray="9 8"/>
+    <path d="M148 196C156 330 138 438 184 560" fill="none" stroke="#ffffff" stroke-width="36"/>
+    <path d="M148 196C156 330 138 438 184 560" fill="none" stroke="#c4cedc" stroke-width="3" stroke-dasharray="8 7"/>
+    <path d="M325 194C292 304 300 422 313 508" fill="none" stroke="#ffffff" stroke-width="34"/>
+
+    <rect x="14" y="214" width="106" height="102" rx="14" fill="#dcefdc"/>
+    <rect x="25" y="232" width="82" height="58" rx="6" fill="#d9e4f5" stroke="#8fa5c7"/>
+    <rect x="190" y="222" width="110" height="74" rx="6" fill="#d9e4f5" stroke="#8fa5c7"/>
+    <rect x="187" y="350" width="106" height="76" rx="6" fill="#d9e4f5" stroke="#8fa5c7"/>
+    <rect x="27" y="411" width="112" height="76" rx="6" fill="#d9e4f5" stroke="#8fa5c7"/>
+    <rect x="305" y="307" width="72" height="67" rx="6" fill="#d9e4f5" stroke="#8fa5c7"/>
+    <rect x="214" y="625" width="126" height="76" rx="6" fill="#d9e4f5" stroke="#8fa5c7"/>
+
+    <g font-family="Arial, sans-serif" font-size="9" font-weight="700" fill="#536480" text-anchor="middle">
+      <text x="66" y="265">Edificio 1</text><text x="245" y="262">Biblioteca</text><text x="240" y="393">Laboratorios</text>
+      <text x="83" y="454">Edificio 2</text><text x="341" y="345">Cafetería</text><text x="277" y="667">Cómputo</text>
+    </g>
+
+    <g transform="translate(245 226)">
+      <path d="M0 0c-13 0-23 10-23 23 0 18 23 42 23 42s23-24 23-42C23 10 13 0 0 0z" fill="#274292"/>
+      <circle cy="23" r="9" fill="#ffffff"/><text y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#274292">B</text>
+    </g>
+    <g transform="translate(341 310)"><path d="M0 0c-11 0-20 9-20 20 0 15 20 36 20 36s20-21 20-36C20 9 11 0 0 0z" fill="#ffe000"/><circle cy="20" r="7" fill="#ffffff"/></g>
+
+    <g id="controles" filter="url(#shadow)">
+      <rect x="326" y="202" width="48" height="98" rx="12" fill="#ffffff"/>
+      <text x="350" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#274292">+</text>
+      <line x1="337" y1="251" x2="363" y2="251" stroke="#dbe2ee"/>
+      <text x="350" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#274292">−</text>
+      <circle cx="350" cy="412" r="24" fill="#2face3"/>
+      <circle cx="350" cy="412" r="8" fill="none" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="350" cy="412" r="2" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <g id="panel-inferior" filter="url(#shadow)">
+    <path d="M0 626Q0 608 18 608H372Q390 608 390 626V844H0Z" fill="#ffffff"/>
+    <rect x="161" y="620" width="68" height="5" rx="3" fill="#c8d0dc"/>
+    <circle cx="46" cy="672" r="25" fill="#eef4ff"/>
+    <text x="46" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#274292">B</text>
+    <text x="82" y="662" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#21315f">Biblioteca Rafael Meza Ayau</text>
+    <text x="82" y="683" font-family="Arial, sans-serif" font-size="11" fill="#667085">Libros, estudio y recursos digitales</text>
+    <rect x="24" y="716" width="342" height="46" rx="11" fill="#274292"/>
+    <text x="195" y="744" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Ver indicaciones</text>
+    <rect x="24" y="774" width="342" height="42" rx="11" fill="#eef4ff"/>
+    <text x="195" y="800" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#274292">Más información</text>
+  </g>
+</svg>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mapa interactivo de la Universidad Don Bosco para orientar a estudiantes y visitantes dentro del campus.">
+  <title>Mapa interactivo UDB</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+      <div class="container-fluid px-3 px-lg-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" aria-label="Mapa interactivo UDB, inicio">
+          <span class="brand-mark" aria-hidden="true">UDB</span>
+          <span class="brand-copy">
+            <strong>Universidad Don Bosco</strong>
+            <small>Mapa interactivo del campus</small>
+          </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Mostrar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#mapa">Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="#instrucciones">Cómo usarlo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#accesibilidad">Accesibilidad</a></li>
+            <li class="nav-item"><a class="nav-link" href="#acerca-de">Acerca de</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-accent" href="#instrucciones">Ayuda</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio" class="map-page container-fluid py-3 py-lg-4">
+    <div class="row g-3 g-lg-4">
+      <aside class="col-12 col-lg-3" aria-labelledby="controls-title">
+        <div class="map-controls surface-card h-100">
+          <div class="controls-intro">
+            <h1 id="controls-title">¿A dónde deseas ir?</h1>
+            <p>Busca un edificio, servicio o espacio dentro del campus.</p>
+          </div>
+
+          <form class="place-search" role="search" action="#" method="get">
+            <label class="visually-hidden" for="placeSearch">Buscar un lugar</label>
+            <div class="input-group">
+              <span class="input-group-text search-symbol" aria-hidden="true"></span>
+              <input id="placeSearch" name="q" class="form-control" type="search" placeholder="Buscar un lugar..." autocomplete="off">
+              <button class="btn btn-primary d-none d-md-inline-flex d-lg-none" type="submit">Buscar</button>
+            </div>
+          </form>
+
+          <section class="filter-section" aria-labelledby="filter-title">
+            <h2 id="filter-title">Filtrar por categoría</h2>
+            <div class="category-filters" role="group" aria-label="Categorías de lugares">
+              <button class="btn filter-button active" type="button" aria-pressed="true">Todos</button>
+              <button class="btn filter-button" type="button" aria-pressed="false">Edificios</button>
+              <button class="btn filter-button" type="button" aria-pressed="false">Laboratorios</button>
+              <button class="btn filter-button" type="button" aria-pressed="false">Cafeterías</button>
+              <button class="btn filter-button" type="button" aria-pressed="false">Baños</button>
+              <button class="btn filter-button" type="button" aria-pressed="false">Parqueos</button>
+            </div>
+          </section>
+
+          <section class="featured-places" aria-labelledby="featured-title">
+            <h2 id="featured-title">Lugares destacados</h2>
+            <ul class="list-unstyled mb-0">
+              <li class="featured-place">
+                <span class="place-icon place-icon-library" aria-hidden="true">B</span>
+                <span><strong>Biblioteca</strong><small>Recursos académicos</small></span>
+              </li>
+              <li class="featured-place">
+                <span class="place-icon place-icon-food" aria-hidden="true">C</span>
+                <span><strong>Cafetería</strong><small>Alimentos y bebidas</small></span>
+              </li>
+              <li class="featured-place">
+                <span class="place-icon place-icon-lab" aria-hidden="true">L</span>
+                <span><strong>Laboratorios</strong><small>Áreas especializadas</small></span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </aside>
+
+      <section id="mapa" class="col-12 col-lg-9" aria-labelledby="map-title">
+        <h2 id="map-title" class="visually-hidden">Mapa del campus</h2>
+        <div class="map-shell surface-card">
+          <div id="campusMap" class="campus-map" role="img" aria-label="Representación del campus con edificios, biblioteca, laboratorios, cafetería y centro de cómputo">
+            <div class="green-zone green-zone-one" aria-hidden="true"></div>
+            <div class="green-zone green-zone-two" aria-hidden="true"></div>
+            <div class="map-road map-road-main" aria-hidden="true"></div>
+            <div class="map-road map-road-left" aria-hidden="true"></div>
+            <div class="map-road map-road-right" aria-hidden="true"></div>
+
+            <button class="map-building building-one" type="button" aria-label="Ver Edificio 1"><span>Edificio 1</span></button>
+            <button class="map-building building-library selected" type="button" aria-label="Ver Biblioteca Rafael Meza Ayau"><span>Biblioteca</span></button>
+            <button class="map-building building-labs" type="button" aria-label="Ver Laboratorios"><span>Laboratorios</span></button>
+            <button class="map-building building-three" type="button" aria-label="Ver Edificio 3"><span>Edificio 3</span></button>
+            <button class="map-building building-food" type="button" aria-label="Ver Cafetería"><span>Cafetería</span></button>
+            <button class="map-building building-two" type="button" aria-label="Ver Edificio 2"><span>Edificio 2</span></button>
+            <button class="map-building building-computing" type="button" aria-label="Ver Centro de Cómputo"><span>Centro de Cómputo</span></button>
+
+            <span class="map-pin pin-library" aria-hidden="true"><span>B</span></span>
+            <span class="map-pin pin-food" aria-hidden="true"><span>C</span></span>
+            <span class="map-pin pin-building" aria-hidden="true"><span>2</span></span>
+
+            <div class="map-zoom btn-group-vertical shadow" role="group" aria-label="Controles de acercamiento">
+              <button class="btn" type="button" aria-label="Acercar mapa">+</button>
+              <button class="btn" type="button" aria-label="Alejar mapa">−</button>
+            </div>
+
+            <div class="map-legend" aria-label="Leyenda del mapa">
+              <span><i class="legend-dot legend-primary"></i>Entrada principal</span>
+              <span><i class="legend-dot legend-secondary"></i>Servicios</span>
+            </div>
+          </div>
+
+          <article class="place-details" aria-labelledby="place-title">
+            <div class="place-details-icon" aria-hidden="true">B</div>
+            <div class="place-details-copy">
+              <h3 id="place-title">Biblioteca Rafael Meza Ayau</h3>
+              <p>Consulta de libros, áreas de estudio y recursos digitales.</p>
+              <p class="place-status">Abierto · 7:00 a. m. – 7:00 p. m.</p>
+              <div class="place-actions">
+                <button class="btn btn-primary" type="button">Ver indicaciones</button>
+                <button class="btn btn-soft" type="button">Más información</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section id="instrucciones" class="info-section mt-4" aria-labelledby="instructions-title">
+      <h2 id="instructions-title">Cómo utilizar el mapa</h2>
+      <p>Busca un lugar o selecciona una categoría. Después, elige un edificio para consultar su información y obtener indicaciones.</p>
+    </section>
+
+    <section id="accesibilidad" class="info-section" aria-labelledby="accessibility-title">
+      <h2 id="accessibility-title">Accesibilidad</h2>
+      <p>Los controles utilizan etiquetas descriptivas, navegación por teclado y colores con contraste suficiente.</p>
+    </section>
+  </main>
+
+  <footer id="acerca-de" class="site-footer">
+    <div class="container-fluid px-3 px-lg-4 d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0"><strong>Mapa interactivo UDB</strong> · Proyecto académico</p>
+      <p class="mb-0">Universidad Don Bosco</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
