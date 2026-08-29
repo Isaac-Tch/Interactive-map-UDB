@@ -8,13 +8,13 @@ En cuanto a los pasos que segui para publicar el repositorio fueron los sigiente
 ## 📁 1. Estructura del proyecto
 
 El proyecto se encontraba almacenado localmente en mi carpeta de Descargas:
-
+```text
 Descargas/
 └── Interactive-map-UDB_Fase1/
     ├── bosquejos/
-    │   ├── imagen1.svg
-    │   ├── imagen2.svg
-    │   └── imagen3.svg
+    │   ├── mapa-udb-computadora.svg
+    │   ├── mapa-udb-tableta.svg
+    │   └── mapa-udb-telefono.svg
     │
     ├── paginas web/
     │   ├── index.html
@@ -22,6 +22,10 @@ Descargas/
     │       └── estilos.css
     │
     └── README.md
+```
+
+---
+
 
 El repositorio remoto utilizado fue:
 
