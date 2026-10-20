@@ -1,0 +1,977 @@
+{
+  "edificios": [
+    {
+      "id": 1,
+      "nombre": "Biblioteca Rafael Meza Ayau",
+      "categoria": "Edificios",
+      "categoriaSlug": "edificio",
+      "icon": "B",
+      "descripcion": "Biblioteca y espacio de estudio. Primer nivel: biblioteca, estudio individual, baños, casilleros y oasis. Segundo nivel: estudio grupal y cubículos 1 al 6.",
+      "referencia": "Zona norte-central, junto al Edificio Rafael Meza Ayau",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 59,
+      "y": 29,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Sala de estudio individual",
+            "Baños",
+            "Casilleros",
+            "Oasis"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "Área de estudio grupal",
+            "Cubículos del 1 al 6"
+          ]
+        }
+      ],
+      "tipoSalaEstudio": "A/C por confirmar"
+    },
+    {
+      "id": 2,
+      "nombre": "Pinacoteca / Centro de Cultura Rafael Meza Ayau",
+      "categoria": "Servicios",
+      "categoriaSlug": "servicio",
+      "icon": "P",
+      "descripcion": "Baños para mujeres y hombres. Primer nivel: sala de estudio grupal Rafael Meza Ayau. Segundo nivel: Centro de Cultura Rafael Meza Ayau. Tercer nivel: oasis, préstamo de computadoras, sala de estudio y sala multimedia.",
+      "referencia": "Edificio junto a la Biblioteca",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 59,
+      "y": 30,
+      "foto": "img/fotos/pinacoteca.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "fotosAdicionales": [
+        "img/fotos/pinacoteca-segnivel.jpg"
+      ],
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Sala de estudio Rafael Meza Ayau"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "Centro de Cultura Rafael Meza Ayau"
+          ]
+        },
+        {
+          "nombre": "Tercer nivel — dos plantas",
+          "servicios": [
+            "Oasis en ambas plantas",
+            "Préstamo de computadoras en una de las plantas",
+            "Sala de estudio",
+            "Sala multimedia"
+          ]
+        }
+      ],
+      "tipoSalaEstudio": "A/C por confirmar"
+    },
+    {
+      "id": 3,
+      "nombre": "Edificio Rafael Meza Ayau",
+      "categoria": "Edificios",
+      "categoriaSlug": "edificio",
+      "icon": "R",
+      "descripcion": "Edificio contiguo a la Biblioteca y al Centro de Cultura Rafael Meza Ayau.",
+      "referencia": "Zona norte-central",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 70,
+      "y": 29,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 4,
+      "nombre": "Edificio 2",
+      "categoria": "Edificios",
+      "categoriaSlug": "edificio",
+      "icon": "2",
+      "descripcion": "Edificio identificado con el número 2 en el mapa. La distribución interna está pendiente de confirmar.",
+      "referencia": "Sector occidental-central",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 31,
+      "y": 48,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 5,
+      "nombre": "Edificio 3",
+      "categoria": "Laboratorios",
+      "categoriaSlug": "servicio",
+      "icon": "3",
+      "descripcion": "Primer nivel: jefatura de departamento, bodega, propulsión, biomédica experimental, laboratorios de biomédica virtual y PCB, automatización, ICIM y fundamentos generales. Segundo nivel: Simlab 1–3, Fablab 1–3, sala de maestros, bodega, I+D+I y sala de reuniones.",
+      "referencia": "Sector occidental",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 28,
+      "y": 51,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Jefatura de departamento",
+            "Bodega de propulsión",
+            "Laboratorios experimentales de biomédica",
+            "Biomédica virtual y PCB",
+            "Automatización ICIM",
+            "Fundamentos generales"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "SIMLAB 1, 2 y 3",
+            "FABLAB 1, 2 y 3",
+            "Sala de maestros",
+            "Bodega I+D+I",
+            "Sala de reuniones"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Edificio 4",
+      "categoria": "Edificios",
+      "categoriaSlug": "edificio",
+      "icon": "4",
+      "descripcion": "Edificio en remodelación según la información proporcionada. Detalles internos pendientes de confirmar.",
+      "referencia": "Sector occidental-sur",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 24,
+      "y": 61,
+      "foto": "img/fotos/edificio 4.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Servicios registrados",
+          "servicios": [
+            "Baños para mujeres y hombres"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Edificio 5",
+      "categoria": "Laboratorios",
+      "categoriaSlug": "servicio",
+      "icon": "5",
+      "descripcion": "Primer nivel: baños, enfermería, seminario de metrología, bodega de soporte técnico, laboratorio de materiales y laboratorio de metrología y ensayo de materiales. Segundo nivel: laboratorios CTIC, proyectos educativos, seguridad informática y oficinas CTIC.",
+      "referencia": "Sector occidental-sur",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 29,
+      "y": 69,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Baños",
+            "Enfermería",
+            "Salón de seminarios de metrología",
+            "Bodega de soporte técnico",
+            "Laboratorio de materiales",
+            "Laboratorio de metrología y ensayo de materiales"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "Laboratorios CTIC",
+            "Departamento de Proyectos Educativos",
+            "Departamento de Seguridad Informática",
+            "Oficinas CTIC"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Edificio 6",
+      "categoria": "Laboratorios",
+      "categoriaSlug": "servicio",
+      "icon": "6",
+      "descripcion": "Primer nivel: aulas CIDIM, ensayo de materiales, diseño digital, manufactura digital, ascensor y laboratorio de simulación. Segundo nivel: diez salones de laboratorio, dos salas de descanso, sala de servidores y sala de estudio individual.",
+      "referencia": "Sector sur-occidental",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 24,
+      "y": 78,
+      "foto": "img/fotos/edificio 6.png",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Aulas de CIDIM",
+            "Ensayo de materiales",
+            "Diseño digital",
+            "Manufactura digital",
+            "Ascensor",
+            "Laboratorio de simulación"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "10 salones de laboratorio",
+            "2 salas de descanso",
+            "Sala de servidores",
+            "Sala de estudio individual"
+          ]
+        }
+      ],
+      "tipoSalaEstudio": "A/C por confirmar"
+    },
+    {
+      "id": 9,
+      "nombre": "Edificio 7",
+      "categoria": "Edificios",
+      "categoriaSlug": "edificio",
+      "icon": "7",
+      "descripcion": "Edificio identificado con el número 7 en el mapa. La distribución interna está pendiente de confirmar.",
+      "referencia": "Sector sur-occidental",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 26,
+      "y": 85,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 10,
+      "nombre": "Edificio 8 — Comunicaciones y Diseño",
+      "categoria": "Laboratorios",
+      "categoriaSlug": "servicio",
+      "icon": "8",
+      "descripcion": "Planta 1: Foro 1 y 2, laboratorios de video, cabinas de producción, área administrativa y docente, estudios fotográficos, cabinas de locución, cabina de radio y auditorio. Planta 2: estudios fotográficos 1–3, salas de diseño digital 1–4, dirección de servicios y proyectos, Vicerrectoría de Ciencia y Tecnología y elevador accesible.",
+      "referencia": "Sector sur, junto a Magna C",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 44,
+      "y": 78,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 11,
+      "nombre": "Edificio A",
+      "categoria": "Aulas",
+      "categoriaSlug": "edificio",
+      "icon": "A",
+      "descripcion": "Niveles inferiores: aulas A11, A12A, A12B, A13A, A13B, A15A, A15B, A16A, A16B, A17A y A21–A26. Tercer nivel: aulas A32–A36.",
+      "referencia": "Zona central",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 62,
+      "y": 47,
+      "foto": "img/fotos/edificio A.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "A13B",
+            "A13A",
+            "A15A",
+            "A12B",
+            "A15B",
+            "A16A",
+            "A12A",
+            "A11",
+            "A16B",
+            "A17A",
+            "Área de idiomas"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "A26",
+            "A25",
+            "A21",
+            "A24",
+            "A22",
+            "A23",
+            "Área de idiomas y humanidades"
+          ]
+        },
+        {
+          "nombre": "Tercer nivel",
+          "servicios": [
+            "A34",
+            "A33",
+            "A35",
+            "A32",
+            "A36",
+            "Área de idiomas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "nombre": "Edificio B",
+      "categoria": "Aulas",
+      "categoriaSlug": "edificio",
+      "icon": "B",
+      "descripcion": "Cada planta tiene siete aulas. Primera planta: B11–B17. Segunda planta: B21–B27. Tercera planta: B31–B37.",
+      "referencia": "Zona central",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 62,
+      "y": 55,
+      "foto": "img/fotos/edificio B.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "B11",
+            "B12",
+            "B13",
+            "B14",
+            "B15",
+            "B16",
+            "B17"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "B21",
+            "B22",
+            "B23",
+            "B24",
+            "B25",
+            "B26",
+            "B27"
+          ]
+        },
+        {
+          "nombre": "Tercer nivel",
+          "servicios": [
+            "B31",
+            "B32",
+            "B33",
+            "B34",
+            "B35",
+            "B36",
+            "B37"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "nombre": "Edificio C",
+      "categoria": "Aulas",
+      "categoriaSlug": "edificio",
+      "icon": "C",
+      "descripcion": "Primer nivel: cuarto de lavado, patio de experimentación y fabricación digital C-12, aulas C-13–C-16 y cajas 1 y 2 del Banco Agrícola. Segundo nivel: C-21–C-27. Tercer nivel: C-31–C-37.",
+      "referencia": "Zona central-sur",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 65,
+      "y": 64,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Cuarto de lavado",
+            "C-12: patio de experimentación y fabricación digital",
+            "Aulas C-13 a C-16",
+            "Cajas 1 y 2, Banco Agrícola"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "C-24",
+            "C-23",
+            "C-22",
+            "C-25",
+            "C-21",
+            "C-26",
+            "C-27"
+          ]
+        },
+        {
+          "nombre": "Tercer nivel",
+          "servicios": [
+            "C-31",
+            "C-32",
+            "C-33",
+            "C-34",
+            "C-35",
+            "C-36",
+            "C-37"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "nombre": "Edificio R — Administración",
+      "categoria": "Oficinas",
+      "categoriaSlug": "edificio",
+      "icon": "R",
+      "descripcion": "Primer nivel: Finanzas, Recursos Humanos y colecturía. Segundo nivel: Dirección de Investigación, decanatos de Aeronáutica, Ingeniería y Economía, y Editorial Don Bosco. Tercer nivel: Unidad de Cumplimiento, Planificación, Rectoría, Vicerrectoría, Secretaría General, Calidad Académica, intercambios y cooperación.",
+      "referencia": "Zona central-norte",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 59,
+      "y": 40,
+      "foto": "img/fotos/edificio R.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Finanzas",
+            "Recursos Humanos",
+            "Colecturía"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "Decanatos",
+            "Aeronáutica",
+            "Ingeniería",
+            "Economía",
+            "Editorial Don Bosco",
+            "Dirección de Investigación"
+          ]
+        },
+        {
+          "nombre": "Tercer nivel",
+          "servicios": [
+            "Secretaría",
+            "Planificación",
+            "Intercambios",
+            "Secretaría General",
+            "Calidad Académica",
+            "Unidad de Cumplimiento",
+            "Cooperación y Desarrollo Profesional",
+            "Rectoría",
+            "Vicerrectoría",
+            "Salas de reuniones 1, 2 y 3",
+            "Dirección de Calidad Académica"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "nombre": "Edificio CDIU (VIPE)",
+      "categoria": "Oficinas",
+      "categoriaSlug": "edificio",
+      "icon": "CD",
+      "descripcion": "Primer nivel: Pastoral universitaria, asistencia estudiantil, nuevo ingreso, comunicación institucional, administración académica y cajeros. Segundo nivel: proyección social, atención psicopedagógica con tres salas, investigación y desarrollo. Tercer nivel: arte y cultura y un oasis.",
+      "referencia": "Zona sur-central",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 62,
+      "y": 72,
+      "foto": "img/fotos/edificio CDIU.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Pastoral Universitaria y Asistencia Estudiantil",
+            "Nuevo Ingreso",
+            "Comunicación Institucional",
+            "Administración Académica",
+            "Cajeros"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "Departamento de Proyección Social",
+            "Departamento de Atención Psicopedagógica (3 salas de atención)",
+            "Departamento de Investigación y Desarrollo"
+          ]
+        },
+        {
+          "nombre": "Tercer nivel",
+          "servicios": [
+            "Departamento de Arte y Cultura",
+            "Oasis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "nombre": "Edificio para Profesores",
+      "categoria": "Oficinas",
+      "categoriaSlug": "edificio",
+      "icon": "P",
+      "descripcion": "Primer nivel: docentes de Ciencias Básicas e Ingeniería, sala de reuniones y cafetería. Segundo nivel: docentes de Ciencias y Humanidades, Ciencias Económicas, baños y cafetería. Tercer nivel: sala de conferencias.",
+      "referencia": "Zona centro-oriente",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 72,
+      "y": 60,
+      "foto": "img/fotos/edificio de maestros.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Primer nivel",
+          "servicios": [
+            "Docentes de Ciencias Básicas",
+            "Docentes de Facultad de Ingeniería",
+            "Sala de reuniones"
+          ]
+        },
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "Centro de Reproducción",
+            "Docentes de Ciencias y Humanidades",
+            "Facultad de Ciencias Económicas",
+            "Baños",
+            "Cafetería (según notas; nivel por confirmar)"
+          ]
+        },
+        {
+          "nombre": "Tercer nivel",
+          "servicios": [
+            "Sala de conferencias"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "nombre": "OWCC — Centro de Ciencias para la Tecnología y Optimización",
+      "categoria": "Laboratorios",
+      "categoriaSlug": "servicio",
+      "icon": "OW",
+      "descripcion": "Segundo nivel: bodega química 2A y cuarto de servidores y tableros eléctricos. Cerca de los parqueos principales también se ubican laboratorios CC-24 a CC-28, laboratorios de química general y bodegas de química.",
+      "referencia": "Sector occidental, cerca del parqueo principal",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 10,
+      "y": 61,
+      "foto": "img/fotos/OWCC.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "niveles": [
+        {
+          "nombre": "Segundo nivel",
+          "servicios": [
+            "Bodega Química 2A",
+            "Cuarto de servidores y tableros eléctricos",
+            "Laboratorio de Electricidad y Magnetismo CC-24",
+            "CC-25 LAB B",
+            "Laboratorio de Química General A CC-21",
+            "Laboratorio de Química General B CC-22",
+            "Bodega Física 2A",
+            "Laboratorio de Termodinámica y Fluidos CC-28",
+            "Bodega Química 2B",
+            "Laboratorio de Química General 3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "nombre": "Aula Magna A",
+      "categoria": "Auditorios",
+      "categoriaSlug": "servicio",
+      "icon": "MA",
+      "descripcion": "Auditorio Magna A, identificado en el plano del campus.",
+      "referencia": "Zona central",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 55,
+      "y": 47,
+      "foto": "img/fotos/Magna A.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 19,
+      "nombre": "Aula Magna B",
+      "categoria": "Auditorios",
+      "categoriaSlug": "servicio",
+      "icon": "MB",
+      "descripcion": "Auditorio Magna B, identificado en el plano del campus.",
+      "referencia": "Zona central",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 54,
+      "y": 56,
+      "foto": "img/fotos/magna B.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 20,
+      "nombre": "Aula Magna C",
+      "categoria": "Auditorios",
+      "categoriaSlug": "servicio",
+      "icon": "MC",
+      "descripcion": "Auditorio Magna C, cercano al acceso sur y contiguo al Edificio 8.",
+      "referencia": "Sector sur",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 40,
+      "y": 72,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 21,
+      "nombre": "Hangar aeronáutico",
+      "categoria": "Laboratorios",
+      "categoriaSlug": "servicio",
+      "icon": "H",
+      "descripcion": "Alberga un avión Eurosun para prácticas aeronáuticas. En el mapa aparece contiguo al Edificio 8 y Magna C.",
+      "referencia": "Sector sur-occidental",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 32,
+      "y": 84,
+      "foto": "img/fotos/hangar.png",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 22,
+      "nombre": "Observatorio Micro Macro (OMM)",
+      "categoria": "Laboratorios",
+      "categoriaSlug": "servicio",
+      "icon": "OMM",
+      "descripcion": "Observatorio con domo de observación, próximo al Portón Norte y a los estacionamientos.",
+      "referencia": "Sector noroccidental, cerca del Portón Norte",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 9,
+      "y": 56,
+      "foto": "img/fotos/observatorio.png",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 23,
+      "nombre": "Centro de Reproducción",
+      "categoria": "Servicios",
+      "categoriaSlug": "servicio",
+      "icon": "CR",
+      "descripcion": "Edificio independiente frente a los parqueos centrales y próximo a la Plaza Don Bosco.",
+      "referencia": "Sector central-oriente",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 75,
+      "y": 57,
+      "foto": "img/fotos/centro de reproducciones.png",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 24,
+      "nombre": "Plaza Don Bosco",
+      "categoria": "Plazas y deportes",
+      "categoriaSlug": "servicio",
+      "icon": "PD",
+      "descripcion": "Plaza y punto de encuentro ubicado en la zona central-oriente del campus.",
+      "referencia": "Zona central-oriente",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 69,
+      "y": 49,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 25,
+      "nombre": "Plaza Las Banderas",
+      "categoria": "Plazas y deportes",
+      "categoriaSlug": "servicio",
+      "icon": "PB",
+      "descripcion": "Plaza identificada en el plano como Plaza Las Banderas.",
+      "referencia": "Sector occidental-central",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 40,
+      "y": 54,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 26,
+      "nombre": "Multigimnasio Don Bosco",
+      "categoria": "Plazas y deportes",
+      "categoriaSlug": "servicio",
+      "icon": "MG",
+      "descripcion": "Instalación deportiva ubicada en la zona nororiental del campus.",
+      "referencia": "Zona nororiental",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 88,
+      "y": 24,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 27,
+      "nombre": "Canchas deportivas",
+      "categoria": "Plazas y deportes",
+      "categoriaSlug": "servicio",
+      "icon": "CD",
+      "descripcion": "Canchas deportivas situadas junto a la Vivienda Salesiana.",
+      "referencia": "Zona oriental",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 89,
+      "y": 42,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 28,
+      "nombre": "Vivienda Salesiana",
+      "categoria": "Servicios",
+      "categoriaSlug": "servicio",
+      "icon": "VS",
+      "descripcion": "Instalación identificada en el plano, próxima a las canchas deportivas y al Portón Peatonal.",
+      "referencia": "Zona nororiental",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 80,
+      "y": 16,
+      "foto": "img/fotos/vivienda salesiana.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "fotosAdicionales": [
+        "img/fotos/vivienda selesiana.png"
+      ]
+    },
+    {
+      "id": 29,
+      "nombre": "Cafeterías del campus",
+      "categoria": "Cafeterías",
+      "categoriaSlug": "servicio",
+      "icon": "CAF",
+      "descripcion": "Puntos de venta de comida y refrigerios. La ubicación de cada cafetería debe confirmarse en el campus.",
+      "referencia": "Varias zonas; verificar en sitio",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 73,
+      "y": 68,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 30,
+      "nombre": "Edificio anexo de Ciencias de la Rehabilitación",
+      "categoria": "Servicios",
+      "categoriaSlug": "servicio",
+      "icon": "AR",
+      "descripcion": "Edificio anexo señalado en el plano, próximo a Magna C y al Edificio 8.",
+      "referencia": "Sector sur",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 42,
+      "y": 80,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 31,
+      "nombre": "Centro de Cuidados y Procedimientos de Enfermería",
+      "categoria": "Servicios",
+      "categoriaSlug": "servicio",
+      "icon": "ENF",
+      "descripcion": "Centro de cuidados y procedimientos de enfermería identificado en el plano.",
+      "referencia": "Sector occidental-sur",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 20,
+      "y": 67,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 32,
+      "nombre": "Portón Norte",
+      "categoria": "Entradas",
+      "categoriaSlug": "accesibilidad",
+      "icon": "N",
+      "descripcion": "Acceso norte del campus, en dirección hacia Ciudad Delgado.",
+      "referencia": "Límite norte",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 13,
+      "y": 27,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 33,
+      "nombre": "Portón Sur",
+      "categoria": "Entradas",
+      "categoriaSlug": "accesibilidad",
+      "icon": "S",
+      "descripcion": "Acceso al campus desde la Carretera de Oro.",
+      "referencia": "Límite sur",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 56,
+      "y": 80,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 34,
+      "nombre": "Portón Peatonal",
+      "categoria": "Entradas",
+      "categoriaSlug": "accesibilidad",
+      "icon": "P",
+      "descripcion": "Acceso peatonal ubicado hacia Soyapango.",
+      "referencia": "Límite norte-oriente",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 81,
+      "y": 7,
+      "foto": "img/fotos/porton peatonal.jpg",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 35,
+      "nombre": "Parqueos principales",
+      "categoria": "Parqueos",
+      "categoriaSlug": "parqueo",
+      "icon": "PK",
+      "descripcion": "Zonas de estacionamiento visibles en el plano del campus.",
+      "referencia": "Sector occidental y central",
+      "horario": "Por confirmar",
+      "accesible": false,
+      "x": 40,
+      "y": 48,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/"
+    },
+    {
+      "id": 36,
+      "nombre": "Baños públicos — Biblioteca",
+      "categoria": "Baños",
+      "categoriaSlug": "servicio",
+      "icon": "WC",
+      "descripcion": "Baños indicados en la información del edificio de Biblioteca.",
+      "referencia": "Primer nivel de Biblioteca Rafael Meza Ayau",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 60,
+      "y": 31,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "mostrarPin": false
+    },
+    {
+      "id": 37,
+      "nombre": "Oasis — Biblioteca",
+      "categoria": "Oasis",
+      "categoriaSlug": "servicio",
+      "icon": "O",
+      "descripcion": "Punto de hidratación indicado en la información de Biblioteca.",
+      "referencia": "Primer nivel de Biblioteca Rafael Meza Ayau",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 57,
+      "y": 27,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "mostrarPin": false,
+      "ubicacionAproximada": true,
+      "notaUbicacion": "Servicio dentro del edificio; posición exacta sin confirmar."
+    },
+    {
+      "id": 38,
+      "nombre": "Oasis — Centro de Cultura",
+      "categoria": "Oasis",
+      "categoriaSlug": "servicio",
+      "icon": "O",
+      "descripcion": "Punto de hidratación indicado en los niveles superiores del Centro de Cultura Rafael Meza Ayau.",
+      "referencia": "Edificio de Pinacoteca / Centro de Cultura",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 61,
+      "y": 32,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "mostrarPin": false,
+      "ubicacionAproximada": true,
+      "notaUbicacion": "Servicio dentro del edificio; posición exacta sin confirmar."
+    },
+    {
+      "id": 39,
+      "nombre": "Baños y enfermería — Edificio 5",
+      "categoria": "Baños",
+      "categoriaSlug": "servicio",
+      "icon": "WC",
+      "descripcion": "El primer nivel del Edificio 5 incluye baños y enfermería.",
+      "referencia": "Edificio 5",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 30,
+      "y": 70,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "mostrarPin": false
+    },
+    {
+      "id": 40,
+      "nombre": "Baños y cafetería — Edificio para Profesores",
+      "categoria": "Baños",
+      "categoriaSlug": "servicio",
+      "icon": "WC",
+      "descripcion": "El segundo nivel del Edificio para Profesores incluye baños y una cafetería.",
+      "referencia": "Edificio para Profesores",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 73,
+      "y": 61,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "mostrarPin": false
+    },
+    {
+      "id": 41,
+      "nombre": "Oasis — CDIU",
+      "categoria": "Oasis",
+      "categoriaSlug": "servicio",
+      "icon": "O",
+      "descripcion": "Punto de hidratación indicado en el tercer nivel del CDIU.",
+      "referencia": "Edificio CDIU",
+      "horario": "Por confirmar",
+      "accesible": true,
+      "x": 64,
+      "y": 73,
+      "foto": "",
+      "galeriaUrl": "https://www.udb.edu.sv/udb360/",
+      "mostrarPin": false,
+      "ubicacionAproximada": true,
+      "notaUbicacion": "Servicio dentro del edificio; posición exacta sin confirmar."
+    }
+  ]
+}

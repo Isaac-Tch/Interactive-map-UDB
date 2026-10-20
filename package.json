@@ -1,0 +1,12 @@
+{
+  "name": "udb-mapa-interactivo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mapa interactivo académico de la Universidad Don Bosco",
+  "scripts": {
+    "api": "json-server --watch data/edificios.json --port 3000"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.4"
+  }
+}

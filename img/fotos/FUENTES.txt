@@ -1,0 +1,2 @@
+Fuente oficial de referencia visual: Universidad Don Bosco, UDB 360 — https://www.udb.edu.sv/udb360/
+Usa únicamente fotografías que tengas derecho a utilizar y conserva la atribución que corresponda. No se descargaron fotografías reales en esta versión; el proyecto admite imágenes locales mediante el campo `foto` de data/edificios.json.

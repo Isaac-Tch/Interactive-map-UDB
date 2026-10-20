@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mapa interactivo del campus de la Universidad Don Bosco.">
+  <title>Mapa interactivo | Universidad Don Bosco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div id="app">
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark container-fluid px-3 px-lg-4" aria-label="Navegación principal">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img class="udb-brand-logo" src="img/logoUDB.jpg" alt="Logo oficial Universidad Don Bosco">
+        <span class="brand-copy"><strong>Universidad Don Bosco</strong><small>Mapa interactivo del campus</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Mostrar navegación"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#mapa">Mapa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#instrucciones">Cómo usarlo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#accesibilidad">Accesibilidad</a></li>
+          <li class="nav-item"><a class="nav-link" href="#acerca-de">Acerca de</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio" class="container-fluid page-wrap py-3 py-lg-4">
+    <div class="row g-3 g-xl-4">
+      <aside class="col-12 col-lg-4 col-xl-3" aria-labelledby="controls-title">
+        <section class="surface-card controls-card" tabindex="0" aria-label="Explorar lugares del campus">
+          <div class="controls-intro">
+            <p class="eyebrow mb-2">EXPLORA EL CAMPUS</p>
+            <h1 id="controls-title">¿A dónde deseas ir?</h1>
+            <p class="text-secondary">Busca un edificio o selecciona un punto del mapa para consultar su información.</p>
+          </div>
+          <label class="visually-hidden" for="placeSearch">Buscar lugar</label>
+          <input id="placeSearch" v-model="search" class="form-control search-input mt-3" type="search" placeholder="Buscar biblioteca, cafetería..." autocomplete="off">
+          <div class="filter-section mt-4">
+            <h2 class="section-label">Filtrar por categoría</h2>
+            <div class="category-filters" role="group" aria-label="Categorías de lugares">
+              <button v-for="cat in categories" :key="cat" class="btn filter-button" :class="{active: activeCategory === cat}" type="button" :aria-pressed="activeCategory === cat" @click="activeCategory = cat">{{ cat }}</button>
+            </div>
+          </div>
+          <section class="featured-places mt-4" aria-labelledby="places-title">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h2 id="places-title" class="section-label mb-0">Lugares encontrados</h2>
+              <span class="result-count">{{ filteredPlaces.length }}</span>
+            </div>
+            <p v-if="loading" class="small text-secondary">Cargando lugares del servicio...</p>
+            <p v-else-if="apiMessage" class="small text-warning-emphasis">{{ apiMessage }}</p>
+            <p v-if="!filteredPlaces.length" class="small text-secondary">No hay lugares que coincidan con la búsqueda.</p>
+            <div class="places-scroll" role="region" aria-label="Lista de lugares encontrados">
+            <button v-for="place in filteredPlaces" :key="place.id" type="button" class="place-list-item" :class="{chosen: selectedPlace && selectedPlace.id === place.id}" @click="selectPlace(place)">
+              <span class="place-list-icon">{{ place.icon }}</span>
+              <span class="place-list-copy"><strong>{{ place.nombre }}</strong><small>{{ place.categoria }}</small></span>
+              <span class="list-arrow" aria-hidden="true">›</span>
+            </button>
+            </div>
+          </section>
+          <div class="data-note mt-3"><span class="status-dot"></span><span>Información cargada dinámicamente desde JSON / API REST simulada.</span></div>
+        </section>
+      </aside>
+
+      <section id="mapa" class="col-12 col-lg-8 col-xl-9" aria-labelledby="map-title">
+        <div class="map-heading d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+          <div><p class="eyebrow mb-1">UNIVERSIDAD DON BOSCO</p><h2 id="map-title" class="h3 mb-0">Mapa del campus</h2></div>
+          <div class="map-hint"><span class="hint-dot"></span> Selecciona un marcador para ver su fotografía y servicios</div>
+        </div>
+        <div class="map-frame surface-card">
+          <div class="map-viewport" :style="{ '--map-scale': zoom }">
+            <div class="map-art updated-map" role="group" aria-label="Mapa ilustrado del campus UDB">
+              <img class="campus-image" src="img/mapa-campus-udb.svg" alt="Plano ilustrado del campus de la Universidad Don Bosco">
+              <button v-for="place in places.filter(p => p.mostrarPin !== false)" :key="place.id" type="button"
+                class="map-hotspot" :class="['cat-' + place.categoriaSlug, {selected: selectedPlace && selectedPlace.id === place.id}]"
+                :style="{left: place.x + '%', top: place.y + '%'}"
+                :aria-label="'Consultar ' + place.nombre"
+                :title="place.nombre"
+                @click="selectPlace(place)">
+                <span class="hotspot-symbol">{{ place.icon }}</span><span class="hotspot-label">{{ place.nombre }}</span>
+              </button>
+            </div>
+          </div>
+          <div class="map-tools" role="group" aria-label="Controles del mapa">
+            <button type="button" class="btn map-tool" @click="zoom = Math.min(1.45, +(zoom + 0.1).toFixed(2))" aria-label="Acercar mapa">+</button>
+            <button type="button" class="btn map-tool" @click="zoom = Math.max(1, +(zoom - 0.1).toFixed(2))" aria-label="Alejar mapa">−</button>
+            <button type="button" class="btn map-tool reset-tool" @click="zoom = 1" aria-label="Restablecer mapa">↺</button>
+          </div>
+          <div class="map-legend"><span><i class="legend-square building-legend"></i> Edificios</span><span><i class="legend-square service-legend"></i> Servicios</span><span><i class="legend-square access-legend"></i> Accesibilidad</span></div>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="row g-3 mt-1">
+      <section id="instrucciones" class="col-12 col-md-6">
+        <div class="info-card h-100"><span class="info-number">01</span><div><h2>Cómo utilizar el mapa</h2><p>Escribe el nombre de un lugar o servicio, filtra por categoría o selecciona uno de los marcadores. Haz clic en el edificio para ver su fotografía, niveles y servicios. Los Oasis y salas de estudio aparecen en el mapa actualizado como referencia visual; la información disponible se consulta dentro de cada ficha.</p></div></div>
+      </section>
+      <section id="accesibilidad" class="col-12 col-md-6">
+        <div class="info-card h-100"><span class="info-number">02</span><div><h2>Accesibilidad</h2><p>Los marcadores pueden seleccionarse con clic o teclado (Tab y Enter). Los lugares accesibles se identifican en su ficha; confirma las condiciones reales en el campus.</p></div></div>
+      </section>
+    </div>
+  </main>
+
+
+  <!-- Ficha en ventana superpuesta: no desplaza el mapa ni recorta las fotografías. -->
+  <div v-if="selectedPlace" class="udb-modal-backdrop" @click.self="closePlace" @keydown.esc="closePlace" role="presentation">
+    <section class="udb-place-modal" role="dialog" aria-modal="true" aria-labelledby="udb-modal-title" tabindex="-1" ref="placeDialog">
+      <button type="button" class="udb-modal-close" @click="closePlace" aria-label="Cerrar información">×</button>
+      <div class="udb-modal-media">
+        <img v-if="selectedPlace.foto" :src="selectedPlace.foto" :alt="'Fotografía de ' + selectedPlace.nombre" class="udb-modal-photo">
+        <div v-else class="udb-modal-placeholder">Fotografía pendiente de agregar</div>
+      </div>
+      <div class="udb-modal-heading">
+        <span class="udb-modal-category">{{ selectedPlace.categoria }}</span>
+        <h2 id="udb-modal-title">{{ selectedPlace.nombre }}</h2>
+        <p v-if="selectedPlace.referencia">{{ selectedPlace.referencia }}</p>
+      </div>
+      <div class="udb-modal-body">
+        <p v-if="selectedPlace.descripcion">{{ selectedPlace.descripcion }}</p>
+        <section v-if="selectedPlace.niveles && selectedPlace.niveles.length" class="levels-section">
+          <h3>Dependencias y servicios por nivel</h3>
+          <div v-for="(nivel, i) in selectedPlace.niveles" :key="i" class="level-group">
+            <h4>{{ nivel.nombre }}</h4>
+            <ul><li v-for="(servicio,j) in nivel.servicios" :key="j">{{ servicio }}</li></ul>
+          </div>
+        </section>
+        <div v-if="selectedPlace.fotosAdicionales && selectedPlace.fotosAdicionales.length" class="udb-extra-gallery">
+          <h3>Otras vistas</h3>
+          <img v-for="(foto,i) in selectedPlace.fotosAdicionales" :key="i" :src="foto" :alt="'Vista adicional de ' + selectedPlace.nombre" loading="lazy">
+        </div>
+        <p v-if="selectedPlace.tipoSalaEstudio">Sala de estudio: {{ selectedPlace.tipoSalaEstudio }}</p>
+        <p v-if="selectedPlace.horario"><strong>Horario:</strong> {{ selectedPlace.horario }}</p>
+      </div>
+    </section>
+  </div>
+
+  <footer id="acerca-de" class="site-footer"><div class="container-fluid px-3 px-lg-4 d-flex flex-column flex-md-row justify-content-between gap-2"><p class="mb-0"><strong>Mapa interactivo UDB</strong> · Proyecto académico</p><p class="mb-0">Datos demostrativos; verificar ubicaciones y horarios con la universidad.</p></div></footer>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

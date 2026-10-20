@@ -1,0 +1,1 @@
+Coloca aquí fotografías reales autorizadas del campus. Usa nombres como biblioteca.jpg, edificio-3.jpg, edificio-8.jpg, hangar.jpg, owcc.jpg y omm.jpg. Luego escribe esa ruta en el campo foto del objeto correspondiente en data/edificios.json. La versión actual enlaza a la galería oficial UDB 360 cuando todavía no hay foto local.
